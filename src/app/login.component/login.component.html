@@ -1,0 +1,39 @@
+<div>
+    <h1>Pokedex Login</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" formControlName="username" required>
+            @if(username.invalid && (username.dirty || username.touched)) {
+                <div class="alert alert-danger">
+                    @if(username.hasError('required')) {
+                        <div>
+                            Username is required.
+                        </div>
+                    }
+                    @if(username.hasError('email')) {
+                        <div>
+                            Username must be a valid email.
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" formControlName="password">
+            @if(password.invalid && (password.dirty || password.touched)) {
+                <div class="alert alert-danger">
+                    @if(password.hasError('required')) {
+                        <div>
+                            Password is required.
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+        <div>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+</div>
