@@ -2,6 +2,15 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.0.
 
+Simple angular application to study basic concepts. This simple app contains:
+- Standalone components
+- Control Flow
+- Reactive Forms
+- Form Validation
+- Http Calls
+- Interceptors
+- Route Guards
+
 ## Development server
 
 To start a local development server, run:
